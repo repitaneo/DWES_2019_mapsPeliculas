@@ -1,6 +1,8 @@
 package com.marcos.mapsPeliculas.negocio;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
 
 import com.marcos.mapsPeliculas.beans.Director;
 import com.marcos.mapsPeliculas.beans.Pelicula;
@@ -8,17 +10,17 @@ import com.marcos.mapsPeliculas.beans.Pelicula;
 public class Netflix {
 	
 	
-	private HashMap<String,Pelicula> peliculasTitulo;
-	private HashMap<Director,Pelicula> peliculasDirector;
-	private HashMap<Integer,Pelicula> peliculasAnio;
+	private LinkedHashMap<String,Pelicula> peliculasTitulo;
+	private LinkedHashMap<Director,Pelicula> peliculasDirector;
+	private LinkedHashMap<Integer,Pelicula> peliculasAnio;
 	
 
 	
 	public Netflix() {
 		
-		peliculasTitulo = new HashMap<String,Pelicula>();
-		peliculasDirector = new HashMap<Director,Pelicula>();
-		peliculasAnio = new HashMap<Integer,Pelicula>();
+		peliculasTitulo = new LinkedHashMap<String,Pelicula>();
+		peliculasDirector = new LinkedHashMap<Director,Pelicula>();
+		peliculasAnio = new LinkedHashMap<Integer,Pelicula>();
 	}
 	
 	
@@ -73,4 +75,17 @@ public class Netflix {
 		
 		return peliculasDirector.get(director);
 	}	
+	
+	
+	
+	
+	
+	
+	public Iterator<Pelicula> getPeliculas() {
+		
+		return peliculasDirector.values().iterator();
+	}
+	
+	
+	
 }
