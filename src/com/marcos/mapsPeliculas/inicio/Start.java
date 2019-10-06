@@ -1,5 +1,7 @@
 package com.marcos.mapsPeliculas.inicio;
 
+import java.util.Iterator;
+
 import com.marcos.mapsPeliculas.beans.Director;
 import com.marcos.mapsPeliculas.beans.Pelicula;
 import com.marcos.mapsPeliculas.negocio.Netflix;
@@ -14,6 +16,13 @@ public class Start {
 		
 		Director copola = new Director();
 		copola.setNombre("Francis Ford Copola");
+		
+		
+		Pelicula elPadrino = new Pelicula();
+		elPadrino.setDirector(copola);
+		elPadrino.setAnio(1972);
+		elPadrino.setTitulo("El padrino");
+		elPadrino.setPresupuesto(45067.34);
 		
 		
 		Pelicula et = new Pelicula();
@@ -33,8 +42,7 @@ public class Start {
 		Netflix baseDatosPeliculas = new Netflix();
 		baseDatosPeliculas.addPelicula(et);
 		baseDatosPeliculas.addPelicula(tiburon);
-		
-		
+		baseDatosPeliculas.addPelicula(elPadrino);
 		
 		PeliculasConsola.imprimir(baseDatosPeliculas.getPeliculas());
 		

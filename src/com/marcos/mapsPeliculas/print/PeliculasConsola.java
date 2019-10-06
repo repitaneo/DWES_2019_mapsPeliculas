@@ -9,6 +9,14 @@ import com.marcos.mapsPeliculas.beans.Pelicula;
 public class PeliculasConsola {
 
 	
+	
+	/**
+	 * Operación para im primir a través de consola
+	 * 
+	 * Recoge un iterador de peliculas es imprime lo que haya en dicho iterador
+	 * 
+	 * @param datos Iterator 
+	 */
 	public static void imprimir(Iterator<Pelicula> datos) {
 		
 		System.out.println("***************************");
